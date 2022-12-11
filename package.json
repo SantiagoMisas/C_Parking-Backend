@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Backend para aplicacion de la asignatura web 2, proyecto con fines educativos del cesde",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
