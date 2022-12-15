@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize";
 
-const dataBase= new Sequelize('parking_app', 'root', '',{
+const dataBase= new Sequelize('parqueadero', 'root', '',{
     host: 'localhost',
     dialect: 'mysql'
 })
