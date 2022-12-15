@@ -1,6 +1,6 @@
 import Cliente from "../models/modelCliente";
 
-cont
+const agregarCliente=()=>{
 try {
     await Cliente.create(req.body);
     res.json({
@@ -11,6 +11,7 @@ try {
     res.json({
         message: "No puede ser agregado" + error,
     });
+}
 }
 
 const mostrarClientes = async (req, res) => {
