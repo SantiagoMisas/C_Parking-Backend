@@ -7,4 +7,4 @@ import { mostrarClientes } from '../controllers/controllerParkingApp'
 
 const routerParking=express.Router();
 
-export default routerParking
+export default routerCliente
