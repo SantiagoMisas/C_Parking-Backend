@@ -1,5 +1,6 @@
 import Cliente from "../models/modelCliente";
 
+cont
 try {
     await Cliente.create(req.body);
     res.json({
@@ -45,7 +46,6 @@ try {
     await Cliente.update(req.body); {
         where: {
             {Cedula: req.params.Cedula}
-
             
         }
     }
