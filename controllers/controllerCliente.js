@@ -1,8 +1,6 @@
 import Cliente from "../models/modelCliente";
-import Factura from "../models/modelFactura";
-import Producto from "../models/modelProducto";
-import Servicio from "../models/modelServicio";
-import Vehiculo from "../models/modelVehiculo";
+
+/* se añade espacio para controllers */
 
 const agregarCliente=async(req, res) =>{};
 const editarCliente=async(req, res) =>{};
