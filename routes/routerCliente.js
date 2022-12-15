@@ -1,10 +1,13 @@
-import express from 'express'
-import { agregarCliente } from '../controllers/controllerParkingApp'
-import { editarCliente } from '../controllers/controllerParkingApp'
-import { eliminarCliente } from '../controllers/controllerParkingApp'
-import { mostrarCliente } from '../controllers/controllerParkingApp'
-import { mostrarClientes } from '../controllers/controllerParkingApp'
+import express from "express";
+import {agregarCliente, editarCliente, mostrarCliente, mostrarClientes, eliminarCliente } from "../controllers/controllerCliente";
 
-const routerParking=express.Router();
 
-export default routerCliente
+const routerCliente = express.Router();
+
+routerCliente .post('/', agregarCliente);
+routerCliente .put('/:id', editarCliente);
+routerCliente .delete('/:id', eliminarCliente);
+routerCliente .get('/:id', mostrarCliente);
+routerCliente .get('/', mostrarClientes);
+
+export default routerCliente ;
