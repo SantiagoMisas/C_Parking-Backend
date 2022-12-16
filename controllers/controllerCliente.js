@@ -44,12 +44,12 @@ try {
 const editarCliente = async (req, res) => {
 
 try {
-    await Cliente.update(req.body); {
+    await Cliente.update(req.body, {
         where: {
-            {id: req.params.id}
+            id: req.params.id
             
         }
-    }
+    });
     res.json({
         message: "Cliente editado"
     });

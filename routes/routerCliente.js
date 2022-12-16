@@ -5,8 +5,8 @@ import {agregarCliente, editarCliente, mostrarCliente, mostrarClientes, eliminar
 const routerCliente = express.Router();
 
 routerCliente .post('/', agregarCliente);
-routerCliente .put('/id', editarCliente);
-routerCliente .delete('/id', eliminarCliente);
+routerCliente .put('/:id', editarCliente);
+routerCliente .delete('/:id', eliminarCliente);
 routerCliente .get('/:id', mostrarCliente);
 routerCliente .get('/', mostrarClientes);
 
