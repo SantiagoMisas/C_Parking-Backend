@@ -1,6 +1,6 @@
-import Cliente from "../models/modelCliente";
+import Cliente from "../models/modelCliente.js";
 
-const agregarCliente=()=>{
+const agregarCliente=async (req, res)=>{
 try {
     await Cliente.create(req.body);
     res.json({
@@ -9,7 +9,7 @@ try {
 
 } catch (error) {
     res.json({
-        message: "No puede ser agregado" + error,
+        message: "No puede ser agregado"+error,
     });
 }
 }
@@ -30,7 +30,7 @@ const mostrarCliente = async (req, res) => {
 try {
     const cliente = await Cliente.findOne({
         where: 
-            {Cedula: req.params.Cedula}
+            {id: req.params.id}
     });
     res.json(cliente)
 
@@ -46,7 +46,7 @@ const editarCliente = async (req, res) => {
 try {
     await Cliente.update(req.body); {
         where: {
-            {Cedula: req.params.Cedula}
+            {id: req.params.id}
             
         }
     }
@@ -66,7 +66,7 @@ const eliminarCliente = async (req, res) => {
 try {
 
     await Cliente.destroy({
-        where: {Cedula: req.params.Cedula }
+        where: {id: req.params.id}
     });
     res.json({
         message: "Cliente eliminado con exito"

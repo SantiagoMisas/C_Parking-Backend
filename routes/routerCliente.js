@@ -1,5 +1,5 @@
 import express from "express";
-import {agregarCliente, editarCliente, mostrarCliente, mostrarClientes, eliminarCliente } from "../controllers/controllerCliente";
+import {agregarCliente, editarCliente, mostrarCliente, mostrarClientes, eliminarCliente } from "../controllers/controllerCliente.js";
 
 
 const routerCliente = express.Router();
@@ -10,4 +10,4 @@ routerCliente .delete('/id', eliminarCliente);
 routerCliente .get('/:id', mostrarCliente);
 routerCliente .get('/', mostrarClientes);
 
-export default routerCliente ;
+export default routerCliente;
