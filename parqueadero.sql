@@ -27,6 +27,10 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `cliente`
 --
 
+create database `parqueadero`;
+
+use `parqueadero`;
+
 CREATE TABLE `cliente` (
   `id` int(11) NOT NULL,
   `cedula` varchar(10) NOT NULL,
