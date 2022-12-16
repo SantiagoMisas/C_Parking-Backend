@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import dataBase from "../database/connectDatabase";
+import dataBase from "../database/connectDatabase.js";
 
 const Vehiculo=dataBase.define('vehiculo', {
     placa: {type: DataTypes.STRING},

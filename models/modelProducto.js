@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import dataBase from "../database/connectDatabase";
+import dataBase from "../database/connectDatabase.js";
 
 const Producto=dataBase.define('producto', {
     nombre: {type: DataTypes.STRING},
